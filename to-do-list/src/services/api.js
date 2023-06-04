@@ -39,8 +39,7 @@ export const getTodoListApi=async()=>{
 };
 export const deleteTodoListItemApi=async(data)=>{
     let token=getToken();
-    console.log(token,'token');
-
+    
     return await axios.post(DELETE_ITEM,data,{
         headers: {
             auth:token

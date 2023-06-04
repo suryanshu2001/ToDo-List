@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect ,useState} from 'react';
-import Todo from '../todo';
+import Todo from './todo';
 import Headers from './header';
 import AddTodoModal from './addTodoModal';
 import { useNavigate } from 'react-router-dom';
@@ -24,6 +24,7 @@ function Home() {
             setList(result.data.data.todos)
             console.log(result)
           }
+
     }
     
   return <>
@@ -32,6 +33,7 @@ function Home() {
         <div className="col justify-content-md-center mt-4">
             {
                 List.map((todo)=><Todo todo={todo} key={todo._id} setRefreshList={setRefreshList}/>)
+                
             }
 
         </div>
