@@ -20,7 +20,7 @@ function AddTodoModal({setRefreshList}){
         if( result.status === 200 && result.data.status===200){
               toast('Todo Added')
               setRefreshList(new Date())
-              setTodoDesc(null)
+              setTodoDesc('')
                   return;
             }
             else{

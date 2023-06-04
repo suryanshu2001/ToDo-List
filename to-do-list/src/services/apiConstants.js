@@ -6,4 +6,5 @@ export const REGISTER="http://localhost:8000/api/register";
 export const CREATE_TODO="http://localhost:8000/api/todo";
 export const TODO_LIST="http://localhost:8000/api/list";
 export const DELETE_ITEM="http://localhost:8000/api/removeTodo";
+export const MARK_ITEM="http://localhost:8000/api/markTodo";
 console.log(`${API_URL}`);

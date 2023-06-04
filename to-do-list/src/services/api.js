@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CREATE_TODO, LOGIN,REGISTER,TODO_LIST ,DELETE_ITEM} from "./apiConstants.js";
+import { CREATE_TODO, LOGIN,REGISTER,TODO_LIST ,DELETE_ITEM,MARK_ITEM} from "./apiConstants.js";
 export const login=async(data)=>{
     try {
         return await axios.post(LOGIN, data);
@@ -41,6 +41,15 @@ export const deleteTodoListItemApi=async(data)=>{
     let token=getToken();
     
     return await axios.post(DELETE_ITEM,data,{
+        headers: {
+            auth:token
+        }
+    })
+};
+export const markTodoListItemApi=async(data)=>{
+    let token=getToken();
+    
+    return await axios.post(MARK_ITEM,data,{
         headers: {
             auth:token
         }
